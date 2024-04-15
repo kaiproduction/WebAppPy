@@ -1,0 +1,22 @@
+from tkinter import *
+
+def btn_click():
+    k = len(s)  # змінна s має бути визначена десь в програмі
+    lab3 = Label(root, text=k, font=('Arial', 24, 'bold'), width=30, height=2, bg='sky blue')
+    lab3.pack()
+
+root = Tk()
+root.title("Червона калина")  # встановлення заголовка вікна
+
+root.geometry("800x400")  # задання розмірів вікна
+root.configure(bg='sky blue')  # змінення кольору фону вікна
+
+s = "Скільки символів містить рядок?"  # приклад рядка
+
+lab = Label(root, text=s, font=('Arial', 18, 'bold'), width=30, height=2, bg='yellow')
+lab.pack()
+
+btn = Button(root, text="Підрахувати", command=btn_click)
+btn.pack()
+
+root.mainloop()
